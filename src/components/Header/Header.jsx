@@ -6,6 +6,10 @@ import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 
+const callMe = () => {
+  window.location.assign('tel:+919664213409');
+}
+
 const Header = () => {
     const menuRef = useRef(null);
     const [menuOpened, setMenuOpened] = useState(false);
@@ -39,7 +43,7 @@ const Header = () => {
                     <li><a href="#people">Testimonials</a></li>
                     <li className={`flexCenter ${css.phone}`}>
                         <p>+91-9664213409</p>
-                        <BiPhoneCall size={"40px"} />
+                        <BiPhoneCall onClick={callMe} size={"40px"} />
                     </li>
                 </ul>
 
